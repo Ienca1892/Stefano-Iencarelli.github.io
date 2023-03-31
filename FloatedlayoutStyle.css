@@ -1,3 +1,8 @@
+/*
+FOUNDATION
+*/
+
+
 :root {
     box-sizing: border-box;
 }
@@ -8,4 +13,14 @@
 
 body * + * {
     margin-top: 1.5em;
+}
+
+/*
+GENERIC RULES
+*/
+
+
+body {
+    background: #bbb;
+    font-family: Arial, Helvetica, sans-serif;
 }
