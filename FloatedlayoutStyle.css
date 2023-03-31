@@ -1,6 +1,4 @@
-/*
-FOUNDATION
-*/
+/*  FOUNDATION  */
 
 
 :root {
@@ -15,12 +13,63 @@ body * + * {
     margin-top: 1.5em;
 }
 
-/*
-GENERIC RULES
-*/
+
+/*  GENERIC RULES  */
 
 
 body {
     background: #bbb;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    background-color: #0072b0;
+    color: white;
+    padding: 1.5em;
+    
+}
+
+footer {
+    font-size: larger;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+header, main, footer, article {
+    border-radius: .5em;
+}
+
+article h3 {
+    margin: 0;
+}
+
+
+/*  LAYOUT  */
+
+
+/*  double container pattern  */
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+article {
+    float: left;
+    width: 50%;
+    background-color: #ededed;
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+/*  Guardando riga 60 e 61 l'impaginazione risulta 
+sballata, quindi posso andare ad aggiustare il tutto
+usando gli pseudo-elementi (vedi riga 69, 70, 71, 72) */
+
+section::after {
+    display: block;
+    content: "";
+    clear: both;
 }
