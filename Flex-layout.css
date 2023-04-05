@@ -1,0 +1,176 @@
+/* DEFAULT INITIAL SETTINGS */
+
+
+:root {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* CUSTOM CSS */
+
+
+body {
+    background-color: #709b90;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV SECTION */
+
+ul.site-nav {
+    display: flex;
+    padding: 0.5em;
+    list-style-type: none;
+    background-color: #5f4d44;
+    border-radius: 0.2em;
+}
+
+ul.site-nav > li {
+    margin-top: 0;
+}
+
+ul.site-nav > li > a {
+    display: block;
+    padding: 0.5em 1em;
+    background-color: #cc6b5a;
+    text-decoration: none;
+    color: white;
+}
+
+ul.site-nav > li > a:hover {
+    background-color: blue;
+}
+
+ul.site-nav > li + li {
+    margin-left: 0.5em;
+}
+
+ul.site-nav > .nav-right {
+    margin-left: auto;
+}
+
+/* MAIN */
+
+/* FLEX CONTAINER */
+
+main {
+    display: flex;
+}
+
+/* FLEX ITEMS */
+
+main > * + * {
+    margin-top: 0;
+    margin-left: 1.5em;
+}
+
+.tile, .tile-centered {
+    background-color: white;
+    padding: 1.5em;
+    flex: content;
+    flex-direction: column;
+}
+
+.tile :first-child {
+    margin-top: 0;
+}
+
+.column-main {
+    flex: 3;
+    text-align: justify;
+}
+
+.column-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.login-form h3 {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    border: 1px solid #dedede;
+    padding: 0.5em 1em;
+}
+
+
+
+.tile-centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cost {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7em;
+    margin-top: auto;
+}
+
+.cost > span {
+    display: block;
+    margin-top: 0;
+    line-height: 0.6em;
+}
+
+.cost-currency {
+    font-size: 2em;
+}
+
+.cost-dollars {
+    font-size: 4em;
+}
+
+.cost-cents {
+    font-size: 1.5em;
+    align-self: flex-start;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background-color: gold;
+    margin-top: auto;
+    padding: 0.5em 1em;
+}
+
+.login-button button {
+    padding: 1.5em auto;
+    width: 60px;
+    height: 35px;
+    font-weight: bold;
+}
+
+
+
