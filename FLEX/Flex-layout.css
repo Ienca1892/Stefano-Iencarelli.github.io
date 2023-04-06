@@ -48,15 +48,13 @@ ul.site-nav > li > a {
     color: white;
 }
 
-ul.site-nav > li > a:hover {
-    background-color: blue;
-}
 
-ul.site-nav > li + li {
+
+ul.site-nav > li:nth-child(1n+2) {
     margin-left: 0.5em;
 }
 
-ul.site-nav > .nav-right {
+ul.site-nav > li.nav-right {
     margin-left: auto;
 }
 
@@ -75,11 +73,14 @@ main > * + * {
     margin-left: 1.5em;
 }
 
+.column-main p {
+    line-height: 1.5em;
+}
+
 .tile, .tile-centered {
     background-color: white;
     padding: 1.5em;
-    flex: content;
-    flex-direction: column;
+    
 }
 
 .tile :first-child {
@@ -97,81 +98,75 @@ main > * + * {
     flex-direction: column;
 }
 
+.column-sidebar > .tile {
+    flex: 1;
+}
+
 
 .login-form h3 {
     margin: 0;
     font-size: 0.9em;
     font-weight: bold;
-    text-align: left;
+    text-align: right;
     text-transform: uppercase;
 }
 
-.login-form label {
-    display: block;
-    text-align: left;
-    font-weight: bold;
-}
-
-.login-form input {
+.login-form input[type=text],
+.login-form input[type=password] {
     display: block;
     width: 100%;
     margin-top: 0;
     border: 1px solid #dedede;
-    padding: 0.5em 1em;
+    padding: .5em 1em;
 }
 
-
-
-.tile-centered {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.cost {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    line-height: 0.7em;
-    margin-top: auto;
-}
-
-.cost > span {
-    display: block;
-    margin-top: 0;
-    line-height: 0.6em;
-}
-
-.cost-currency {
-    font-size: 2em;
-}
-
-.cost-dollars {
-    font-size: 4em;
-}
-
-.cost-cents {
-    font-size: 1.5em;
-    align-self: flex-start;
-}
-
-.cta-button {
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    background-color: gold;
-    margin-top: auto;
-    padding: 0.5em 1em;
-}
-
-.login-button button {
+.login-form button {
     margin-top: 1em;
     border: 1px solid #cc6b5a;
     padding: 0.5em 1em;
     background-color: white;
     cursor: pointer;
 }
+
+
+
+.centered {
+    text-align: center;
+}
+
+.cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.7;
+}
+
+.cost > span {
+    margin-top: 0;
+}
+
+.cost-currency {
+    font-size: 2rem;
+}
+
+.cost-dollars {
+    font-size: 4rem;
+}
+
+.cost-cents {
+    font-size: 1.5rem;
+    align-self: flex-start;
+}
+
+.cta-button {
+    display: block;
+    text-decoration: none;
+    background-color: gold;
+    padding: 0.5em 1em;
+    color: white;
+}
+
+
 
 
 
