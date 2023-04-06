@@ -1,0 +1,12 @@
+:root {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
