@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        .container {
+            margin: 0 auto;
+            max-width: 1080px;
+        }
+
+        .container > * {
+            background: blue;
+            color: white;
+            border-radius: 0.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2em;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: "header"
+                                 "nav"
+                                 "main sidebar1"
+                                 "main sidebar2";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 0.5em;
+        }
+
+        .a {
+            grid-columns: main;
+            grid-row: main;
+        }
+        .b {
+            grid-columns: header;
+            grid-row: header;
+        }
+        .c {
+            grid-columns: nav;
+            grid-row: nav;
+        }
+        .d {
+            grid-columns: sidebar1;
+            grid-row: sidebar1;
+        }
+        .e {
+            grid-columns: sidebar2;
+            grid-row: sidebar2;
+        }
+        .f {
+            display: none;
+        }
+        
+        </style>
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="e">E</div>
+        <div class="f">F</div>
+        
+    </div>
+    
+</body>
+</html>
