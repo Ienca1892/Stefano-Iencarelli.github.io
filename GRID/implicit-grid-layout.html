@@ -7,37 +7,93 @@
     <title>Implicit Grid Layout</title>
     <style>
         
+        :root {
+            box-sizing: border-box;
+        }
+        *, ::before, ::after {
+            box-sizing: inherit;
+        }
+        
+
+        body {
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .portfolio {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        figure {
+            margin: 0;
+        }
+        figure img {
+            max-width: 100%;
+            margin: 0;
+            display: block;
+        }
+        figure figcaption {
+            margin: 0;
+            padding: 0.3em 0.8em;
+            text-align: right;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-rows: 1fr;
+            grid-gap: 1em;
+        }
+        .portfolio .featured {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+
+        .portfolio {
+            grid-auto-flow: dense;
+        }
+        figure {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+        }
+        figure img {
+            flex: 1;
+            object-fit: cover;
+        }
+
+        
     </style>
 </head>
 <body>
     <div class="portfolio">
         <figure>
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_470662518_Preview.jpeg" alt="animal1">
-            <figcaption>animal1</figcaption>
+            <figcaption>Animal 1</figcaption>
         </figure>
         <figure>
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476112891_Preview.jpeg" alt="animal2">
-            <figcaption>animal2</figcaption>
+            <figcaption>Animal 2</figcaption>
         </figure>
-        <figure>
+        <figure class="featured">
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476155062_Preview.jpeg" alt="animal3">
-            <figcaption>animal3</figcaption>
+            <figcaption>animal 3</figcaption>
         </figure>
         <figure>
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476207570_Preview.jpeg" alt="animal4">
-            <figcaption>animal4</figcaption>
+            <figcaption>Animal 4</figcaption>
         </figure>
         <figure>
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476250947_Preview.jpeg" alt="animal5">
-            <figcaption>animal5</figcaption>
+            <figcaption>Animal 5</figcaption>
         </figure>
-        <figure>
+        <figure class="featured">
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476477617_Preview.jpeg" alt="animal6">
-            <figcaption>animal6</figcaption>
+            <figcaption>Animal 6</figcaption>
         </figure>
-        <figure>
+        <figure class="featured">
             <img src="/Users/stefano/Desktop/Ienca1892.github.io/Ienca1892.github.io/Ienca1892.github.io/GRID/assets/AdobeStock_476736381_Preview.jpeg" alt="animal7">
-            <figcaption>animal7</figcaption>
+            <figcaption>Animal 7</figcaption>
         </figure>
     </div>
     
