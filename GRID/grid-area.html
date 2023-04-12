@@ -28,8 +28,8 @@
 
         .container {
             display: grid;
-            grid-template-areas: "header"
-                                 "nav"
+            grid-template-areas: "header header"
+                                 "nav nav"
                                  "main sidebar1"
                                  "main sidebar2";
             grid-template-columns: 3fr 1fr;
@@ -38,29 +38,36 @@
         }
 
         .a {
-            grid-columns: main;
+            grid-column: main;
             grid-row: main;
-        }
-        .b {
-            grid-columns: header;
-            grid-row: header;
-        }
-        .c {
-            grid-columns: nav;
-            grid-row: nav;
-        }
-        .d {
-            grid-columns: sidebar1;
-            grid-row: sidebar1;
-        }
-        .e {
-            grid-columns: sidebar2;
-            grid-row: sidebar2;
-        }
-        .f {
-            display: none;
+            background-color: red;
         }
         
+        
+        .b { 
+            grid-column: header;
+            grid-row: header;
+            background-color: blue;
+        }
+        .c {
+            grid-column: nav;
+            grid-row: nav;
+            background-color: green;
+        }
+        .d {
+            grid-column: sidebar1;
+            grid-row: sidebar1;
+            background-color: gold;
+        }
+        .e {
+            grid-column: sidebar2;
+            grid-row: sidebar2;
+            background-color: blueviolet;
+        }
+         
+
+        
+
         </style>
 
 </head>
@@ -72,7 +79,7 @@
         <div class="c">C</div>
         <div class="d">D</div>
         <div class="e">E</div>
-        <div class="f">F</div>
+        
         
     </div>
     
