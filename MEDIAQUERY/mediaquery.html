@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediaquery</title>
+    <link rel="stylesheet" href="print.css" media="print">
+    <style>
+        .title > h1 {
+            color: #333;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            margin: 0.2em 0;
+            color: red;
+        }
+
+        .container {
+            background-color: aquamarine;
+        }
+
+        @media screen {
+            
+        }
+            div.title > h1 {
+                color: yellow;
+            }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Questo è MediaQuery</h1>
+        </div>
+        <article>
+            <h2>MediaQuery</h2>
+            <p>Some text</p>
+        </article>
+    </div>
+    
+</body>
+</html>
