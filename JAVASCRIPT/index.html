@@ -9,7 +9,9 @@
 <body>
     <!-- <script src="index.js"></script>  -->
 
+    
     <script>
+       /*   // Esercizio 1 (Somma e Media di 5 valori)
 
         var a, b, c, d, e;
 
@@ -38,6 +40,93 @@
         console.log(typeof risultatoMedia);
 
     */
+    
+    </script>
+
+    <script>
+        /* 
+         Esercizio 2  (Quanti anni ha?)
+         Dato l'anno corrente e anno di nascita si determini l'età della persona e
+         quanti anni sono necessari per raggiungere i 100.
+         Input = Anno corrente: 2018, anno di nascita: 1991
+         Output = età: 27, anni mancanti: 73
+        */
+
+      /*    var currentYear = 2018;
+        var bornYear = 1991;
+
+        var age = currentYear - bornYear;
+        var ageDistance = 100 - age;
+
+        var result = "età = " + age + ", anni mancanti = " + ageDistance;
+
+        console.log(result);
+      */
+    </script>
+
+    <script>
+        /* 
+        
+        Esercizio 3  (Gatti in fila)
+        Dato un numero totale di gatti e il numero di gatti presenti in ogni fila
+        restituisca:
+        - il numero di file risultanti
+        - nel caso l'ultima fila risulti incompleta indicare il numero 
+        di gatti mancanti per completarla.
+
+        Input = numero di gatti: 44, gatti per fila: 6
+        Output = numero di file: 8, gatti mancanti: 4
+        
+        
+
+        var cats = 44;
+        var catsPerRow = 6;
+
+        var rowNumber = cats / catsPerRow;
+        var roundedRowNumber = Math.ceil(rowNumber);
+        var remainder = cats % catsPerRow;
+        var missing = catsPerRow - remainder;
+
+        var result = "numero di file = " + roundedRowNumber + ", gatti mancanti = " + missing;
+        console.log(result);
+
+        */
+
+    </script>
+
+    <script>
+
+        /* 
+        
+        Esercizio 4
+        Dato un numero di secondi, calcola la quantità di ore, minuti e secondi 
+        corrispondenti e poi stampa il risultato. Il risultato avrà solo numeri
+        interi. 
+        Input = 12560
+        Output = 3 ore, 29 minuti e 20 secondi
+        
+        */
+
+        var h, m, s;
+
+
+        var inputSeconds = 12560;
+        var secondsHour = 60 * 60;
+        var secondsMinute = 60;
+
+       // console.log(inputSeconds % secondsHour);
+
+        
+
+        h = Math.floor(inputSeconds / secondsHour);
+        m = Math.floor(inputSeconds % secondsHour / secondsMinute);
+        s = Math.floor(inputSeconds % secondsMinute);
+
+        var result = h + " ore, " + m + " minuti e " + s + " secondi";
+        console.log(result);
+
+
+
 
     </script>
 </body>
