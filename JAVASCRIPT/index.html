@@ -105,12 +105,12 @@
         Input = 12560
         Output = 3 ore, 29 minuti e 20 secondi
         
-        */
+        
 
         var h, m, s;
 
 
-        var inputSeconds = 12560;
+        var inputSeconds =  12560;
         var secondsMinute = 60;
         var secondsHour = 60 * secondsMinute;
         
@@ -123,12 +123,46 @@
         m = Math.floor(inputSeconds % secondsHour / secondsMinute);
         s = Math.floor(inputSeconds % secondsHour % secondsMinute);
 
-        var result = h + " ore, " + m + " minuti e " + s + " secondi";
+        var result = h + " or" + (h === 1 ? "a" : "e") + " , " + 
+                     m + " minut" + (m === 1 ? "o" : "i") + " e " +
+                     s + " second" + (s === 1 ? "o" : "i");
         console.log(result);
 
 
-
+        */
 
     </script>
+
+    <script>
+        /* if (color === "red") {message = "stop"
+            
+        } else if (color === "yellow") {message = "alert"
+            
+        } else if (color === "green") {message = "go"}  */
+
+        
+
+        switch (color) {
+            case "red":
+                message = "stop"
+                break;
+
+            case "yellow":    
+            case "blue":
+            case "purple":
+            case "magenta":
+            case "black":
+                message = "alert"
+                break;
+
+            case "green":
+                message = "go"    
+                break;
+        
+            default:
+                throw Error("colore non gestito")
+        }
+    </script>
+
 </body>
 </html>
