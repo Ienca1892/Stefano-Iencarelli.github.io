@@ -141,7 +141,7 @@
         } else if (color === "green") {message = "go"}  */
 
         
-
+    /*
         switch (color) {
             case "red":
                 message = "stop"
@@ -162,6 +162,43 @@
             default:
                 throw Error("colore non gestito")
         }
+    */  
+    </script>
+
+    <script>
+
+        /*
+        for (var i=0; i<10; i++){
+            console.log("i'm waiting dal for");
+        }
+
+        */
+    </script>
+
+    <script>  // Esercizi lezione 23 "Caldo e Freddo: dati 3 valori qual'è la giornata più calda e quella più fredda?"
+
+    var a = 30;
+    var b = -2;
+    var c = 10;
+
+    var caldo = 0;
+    var freddo = 0;
+
+    if (a >= b && a >= c){
+        caldo = a;
+        freddo = b < c ? b : c;   // confronto ternario
+        } else if (b >= a && b >= c){
+        caldo = b;
+        freddo = a < c ? a : c;
+        } else {
+        caldo = c;
+        freddo = b < a ? b : a;
+        }
+        
+    var result = "giornata più calda = " + caldo + ", giornata più fredda = " + freddo;
+    console.log(result); 
+
+
     </script>
 
 </body>
