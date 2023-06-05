@@ -175,7 +175,11 @@
         */
     </script>
 
-    <script>  // Esercizi lezione 23 "Caldo e Freddo: dati 3 valori qual'è la giornata più calda e quella più fredda?"
+    <script>  
+    
+     
+
+    /* Esercizi lezione 23 "Caldo e Freddo: dati 3 valori qual'è la giornata più calda e quella più fredda?"
 
     var a = 30;
     var b = -2;
@@ -198,7 +202,107 @@
     var result = "giornata più calda = " + caldo + ", giornata più fredda = " + freddo;
     console.log(result); 
 
+    */
 
+
+    </script>
+
+    <script>
+        
+       /* "Conta le cifre": scrivi un programma che dato un numero (massimo 9999) conti da quante cifre è formato.
+        
+        Esempi: 
+        Input: numero = 9
+        Output: 1 cifra
+
+        Input: numero = 245
+        Output: 3 cifre 
+        
+        var a=prompt("inserisci il numero");
+            if (a < 10){
+                console.log("1 cifra");
+            }
+            else if (a<100) {
+                console.log("2 cifre");
+            }
+            else if (a<1000) {
+                console.log("3 cifre");
+            }
+            else {
+                console.log("4 cifre");
+            }
+
+        */
+
+    </script>
+
+    <script>
+        
+
+        // Scrivi un programma che converta un voto numerico (v) in un giudizio seguendo questi parametri:
+
+       /* v < 18 : insufficiente
+        18 <= v < 21 : sufficiente
+        21 <= v < 24 : buono
+        24 <= v < 27 : distinto
+        27 <= v <= 29 : ottimo
+        v = 30 : eccellente
+        Utilizza il costrutto if.
+
+        Esempio: 
+        Input: v = 29
+        Output: distinto
+
+        Realizzare una versione con il costrutto Switch-Case. In questo caso gestire anche l'opzione in cui il voto 
+        inserito non sia valido.
+
+        var a = prompt("inserire il voto"); 
+
+        if (a < 18){
+            console.log("insufficiente");
+        }
+        else if (a >= 18 && a < 21){
+            console.log("sufficiente");
+        }
+        else if (a >= 21 && a < 24){
+            console.log("buono");
+        }
+        else if (a >= 24 && a < 27){
+            console.log("distinto");
+        }
+        else if (a >= 27 && a <= 29){
+            console.log("ottimo");
+        }
+        else {
+            console.log("eccellente")
+        }
+        */
+
+    
+        var a = prompt("inserire il voto");
+    console.log(a);
+        switch (true) {
+            case a < 18: 
+            console.log("insufficiente");
+            break;
+            case (a >= 18 && a < 21):
+            console.log("sufficiente");
+            break;
+            case (a >= 21 && a < 24):
+            console.log("buono");
+            break;
+            case (a >= 24 && a < 27):
+            console.log("distinto");
+            break;
+            case (a >= 27 && a <= 29):
+            console.log("ottimo");
+            break;
+            case a = 30:
+            console.log("eccellente");
+            break;
+
+        }
+     
     </script>
 
 </body>
