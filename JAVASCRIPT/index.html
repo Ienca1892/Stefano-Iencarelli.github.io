@@ -310,12 +310,44 @@
     
     </script>
     <script>
+       /*
         var obj1 = {
             Name: "test"
         }
         console.log(obj1);
+        */
+    </script>
 
+    <script>
 
+        var lion = {
+            Roar : function (){},
+        };
+        
+        console.log(lion);
+
+        function addFeatures () {
+
+            var animal = {
+                Breathe : function (){},
+                birthDate : new Date(),
+            }
+
+            var felini = {
+                Type : "Mammifero",
+                Run : function (){},
+                Assault : function (){},
+            }
+
+            Object.setPrototypeOf(felini, animal);
+            Object.setPrototypeOf(lion, felini);
+
+            console.log(lion);
+            
+
+        } 
+        
+        
     </script>
 
 </body>
