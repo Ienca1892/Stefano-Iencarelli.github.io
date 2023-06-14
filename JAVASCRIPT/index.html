@@ -319,6 +319,7 @@
     </script>
 
     <script>
+        /*
 
         var lion = {
             Roar : function (){},
@@ -346,8 +347,45 @@
             
 
         } 
+        */
+    </script>
+
+    <script>
+
+        function Car(name, manufacturer) {
+            this.name = name;
+            this.manufacturer = manufacturer;
+            
+        }
+
+        Car.prototype.year = undefined;
+        Car.prototype.toString = function () {
+            return this.name + " , " + this.manufacturer;
+            }
+
+        Object.prototype.sayThis = function (t) {
+            return t;
+        }    
+
+        var car1 = {name: "Fiesta", manufacturer: "Ford"};
+        var car2 = {name: "Panda", manufacturer: "Fiat"};
+        var car3 = new Car("ModelY", "Tesla"); 
+        car1.year = 2015;
+        car2.year = 2011;
+        car3.year = 2018;
+
+        console.log(car1);
+        console.log(car2);
+        console.log(car3);
+
+        // Object.prototype.sayThis = "testo"; --- tutti gli eredi
+        // Car.sayThis = "testo"; --- tutti quelli che vengono da car sono impattati
+        // car5.sayThis = "testo"; --- solo l'istanza car5 viene impattata
         
-        
+
+
+
+
     </script>
 
 </body>
