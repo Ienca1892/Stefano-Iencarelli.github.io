@@ -351,6 +351,7 @@
     </script>
 
     <script>
+        /*
 
         function Car(name, manufacturer) {
             this.name = name;
@@ -382,11 +383,127 @@
         // Car.sayThis = "testo"; --- tutti quelli che vengono da car sono impattati
         // car5.sayThis = "testo"; --- solo l'istanza car5 viene impattata
         
+        */
+
+    </script>
+
+<!-- 
+    <p id="demo"></p>
+
+    <script>
+        
+    /* 
+        var a = prompt("inserire il valore in grammi");
+        console.log(a);
+
+        var g = 1000;
+        var kg = 1;
+        
+        
+
+        function converter(g, Kg) {
+            
+        return g * kg;
+
+        } 
+    */
+
+        
+
+         function toKilograms(Kg) {
+            return (1/1000);
+        }
+        let value = toKilograms;
+        document.getElementById("demo").innerHTML = value + "Kg";
+
+        </script> -->
+    
+<!-- 
+    
+
+        Inserire il valore in grammi (g): <input type="text" name="grams" id="grams" placeholder="0">
+        <hr>
+        Risultato: <p id="convert"></p>
+
+        <button onclick="kilo()">Chilogrammi (Kg)</button>
+
+    <script>
+        
+    function kilo() {
+        document.getElementById("convert").innerHTML = (document.getElementById("grams").value/1000 + "kg");
+    }
+
+    </script>
+
+        
+
+         -->
 
 
+    <script>
+
+        function Card(face, suit) {
+            function getFace(face){
+
+                switch (face){
+                    case 0:
+                        return "Asso";
+                    case 1:
+                        return "2";
+                    case 2:
+                        return "3";
+                    case 3:
+                        return "4";
+                    case 4:
+                        return "5";
+                    case 5:
+                        return "6";
+                    case 6:
+                        return "7";
+                    case 7:
+                        return "8";
+                    case 8:
+                        return "9";
+                    case 9:
+                        return "King";
+                }        
+                
+                throw new Error("Argument out of range");
+
+
+                    return "Asso";
+            }
+            this.face = getFace(face);
+            this.suit = "Cuori";
+            
+        }
+
+        function CardDeck(){
+            this.shuffle = function () {
+
+                var face = 0;
+                var suit = 0;
+
+
+
+                return new Card(0, 0);
+                
+            }
+        }
+
+        var cardDeck = new CardDeck();
+
+        console.log(cardDeck);
+        console.log(cardDeck.shuffle());
 
 
     </script>
+
+
+
+
+
+    
 
 </body>
 </html>
