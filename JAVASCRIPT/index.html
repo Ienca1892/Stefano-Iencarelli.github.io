@@ -453,13 +453,15 @@
         function getFace(face){
 
             if ((face < 0 || face > 9) || Number.isInteger(face) === false)
-            throw new Error("Argument out of range");
+               throw new Error("Argument out of range");
 
             switch (face) {
                 case 0:
                     return "Asso";
+                    break;
                 case 9:
                     return "Re";
+                    break;
                 default:
                     return (face + 1).toString();
                 
