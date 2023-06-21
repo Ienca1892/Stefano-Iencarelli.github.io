@@ -440,53 +440,57 @@
          -->
 
 
-    <script>
+<script>
 
         function Card(face, suit) {
-            function getFace(face){
 
-                switch (face){
-                    case 0:
-                        return "Asso";
-                    case 1:
-                        return "2";
-                    case 2:
-                        return "3";
-                    case 3:
-                        return "4";
-                    case 4:
-                        return "5";
-                    case 5:
-                        return "6";
-                    case 6:
-                        return "7";
-                    case 7:
-                        return "8";
-                    case 8:
-                        return "9";
-                    case 9:
-                        return "King";
-                }        
-                
-                throw new Error("Argument out of range");
-
-
-                    return "Asso";
-            }
             this.face = getFace(face);
-            this.suit = "Cuori";
+
+            this.suit = getSuit(suit);
+
+
+
+        function getFace(face){
+
+            if ((face < 0 || face > 9) || Number.isInteger(face) === false)
+            throw new Error("Argument out of range");
+
+            switch (face) {
+                case 0:
+                    return "Asso";
+                case 9:
+                    return "Re";
+                default:
+                    return (face + 1).toString();
+                
+            }
+        }
+    }
+
+        function getSuit(suit){
+
+            if (suit < 0 || suit > 3)
+               throw new Error("Argument out of range");
+
+            if (suit === 0){
+                return "Cuori";
+            } else if (suit === 1){
+                return "Fiori";
+            } else if (suit === 2){
+                return "Quadri";
+            } else if (suit === 3){
+                return "Picche";
+            }
             
         }
 
         function CardDeck(){
             this.shuffle = function () {
 
-                var face = 0;
-                var suit = 0;
+                var face = Math.round(Math.random() + 9);
+                var suit = Math.round(Math.random() + 3);
 
-
-
-                return new Card(0, 0);
+                return new Card(face, suit);
                 
             }
         }
@@ -495,15 +499,9 @@
 
         console.log(cardDeck);
         console.log(cardDeck.shuffle());
-
-
-    </script>
-
-
-
-
-
     
+
+</script>  
 
 </body>
 </html>
