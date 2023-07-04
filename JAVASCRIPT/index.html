@@ -309,6 +309,7 @@
      */
     
     </script>
+
     <script>
        /*
         var obj1 = {
@@ -387,131 +388,58 @@
 
     </script>
 
-<!-- 
+
     <p id="demo"></p>
 
-    <script>
-        
-    /* 
-        var a = prompt("inserire il valore in grammi");
-        console.log(a);
-
-        var g = 1000;
-        var kg = 1;
-        
-        
-
-        function converter(g, Kg) {
-            
-        return g * kg;
-
-        } 
-    */
-
-        
-
-         function toKilograms(Kg) {
-            return (1/1000);
-        }
-        let value = toKilograms;
-        document.getElementById("demo").innerHTML = value + "Kg";
-
-        </script> -->
-    
-<!-- 
-    
-
-        Inserire il valore in grammi (g): <input type="text" name="grams" id="grams" placeholder="0">
+    Inserire il valore in grammi (g): <input type="text" name="grams" id="grams" placeholder="number">
         <hr>
         Risultato: <p id="convert"></p>
 
         <button onclick="kilo()">Chilogrammi (Kg)</button>
 
-    <script>
-        
-    function kilo() {
-        document.getElementById("convert").innerHTML = (document.getElementById("grams").value/1000 + "kg");
-    }
 
+    <script>
+
+        var result = (value/1000);
+        
+        function converter(value) {
+
+
+            return result;
+            
+        }
+       
+
+        
+        
+        
+    //    function toKilograms(Kg) {
+    //        return (1/1000);
+    //    }
+    //    let value = toKilograms;
+    //    document.getElementById("demo").innerHTML = value + "Kg";
+
+    
+        function kilo() {
+            document.getElementById("convert").innerHTML = (document.getElementById("grams").value/1000 + " kg ");
+        }
+ 
     </script>
 
         
 
-         -->
-
-
-<script>
-
-    /*     function Card(face, suit) {
-
-            this.face = getFace(face);
-
-            this.suit = getSuit(suit);
 
 
 
-        function getFace(face){
+ 
 
-            if ((face < 0 || face > 9) || Number.isInteger(face) === false)
-               throw new Error("Argument out of range");
-
-            switch (face) {
-                case 0:
-                    return "Asso";
-                    break;
-                case 9:
-                    return "Re";
-                    break;
-                default:
-                    return (face + 1).toString();
-                
-            }
-        }
-    }
-
-        function getSuit(suit){
-
-            if (suit < 0 || suit > 3)
-               throw new Error("Argument out of range");
-
-            if (suit === 0){
-                return "Cuori";
-            } else if (suit === 1){
-                return "Fiori";
-            } else if (suit === 2){
-                return "Quadri";
-            } else if (suit === 3){
-                return "Picche";
-            }
-            
-        }
-
-        function CardDeck(){
-            this.shuffle = function () {
-
-                var face = Math.round(Math.random() + 9);
-                var suit = Math.round(Math.random() + 3);
-
-                return new Card(face, suit);
-                
-            }
-        }
-
-        var cardDeck = new CardDeck();
-
-        console.log(cardDeck);
-        console.log(cardDeck.shuffle());
-     */
-
-</script>  
-
-<script>
+    <script> 
 
     /* const array = ['John', '31', 'Robert', 5];
     
 
     var a = element => {
-        console.log(element)
+ //       console.log(element)
     };
     array.forEach(a); */
     
@@ -533,9 +461,9 @@
 
     console.log(map1); */
 
-</script>
+    </script>
 
-<script>  // Esercizio con gli Array
+    <script>  // Esercizio con gli Array
 /*
 
 Scrivi un programma che dati:
@@ -552,22 +480,63 @@ Input: a = [3, 7, 2, 5, 8, 1, 2, 5, 6, 4]
 
 Output: c = [12, 10, 3, 9, 15, 7, 7, 15, 7, 9]
 
+
+ 
+    const array1 = [3, 7, 2, 5, 8, 1, 2, 5, 6, 4];
+    const array2 = [9, 3, 1, 4, 7, 6, 5, 10, 1, 5]; 
+
+    
+    function operazioneTraArray(array1, array2){
+        
+        var array3 = [];
+
+        for (var i = 0; i < array1.length; i++) {
+    //        array3 = array1.map((x, index) => (x + array2[index]));
+        }
+        return array3;
+    }
+    
+
+    
+
+    
+    for (var n = 0; n < array1.length; n++) {
+        switch (operazione){
+            case "addizione":
+            array3[n] = array1[n] + array2[n];
+                break;
+            case "sottrazione":
+            array3[n] = array1[n] - array2[n];
+                break;
+            case "moltiplicazione":
+            array3[n] = array1[n] * array2[n];
+                break;
+            case "divisione": 
+            array3[n] = array1[n] / array2[n];
+                break;
+            default:
+                throw Error("operazione non consentita")           
+
+        }
+        
+        
+    } 
+
+
+
+var result = operazioneTraArray([3, 7, 2, 5, 8, 1, 2, 5, 6, 4], [9, 3, 1, 4, 7, 6, 5, 10, 1, 5]);
+console.log(result + " \"addizione tra elementi di array1 e array2\" ");
 */
+ 
 
-var a = [3, 7, 2, 5, 8, 1, 2, 5, 6, 4];
-var b = [9, 3, 1, 4, 7, 6, 5, 10, 1, 5];
 
-function operazioneTraArray(array1, array2, operazione) {
-    return [a + b];
-}
-
-console.log([a + b]);
-
-var result = operazioneTraArray([3, 7, 2, 5, 8, 1, 2, 5, 6, 4],[9, 3, 1, 4, 7, 6, 5, 10, 1, 5], "addizione");
+ 
 
 
 
-</script>
+
+ 
+    </script>
 
 </body>
 </html>
