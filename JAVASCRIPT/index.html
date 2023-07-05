@@ -387,8 +387,8 @@
         */
 
     </script>
-
-
+<!-- 
+                        "Converti i grammi (g) in chilogrammi (Kg)"
     <p id="demo"></p>
 
     Inserire il valore in grammi (g): <input type="text" name="grams" id="grams" placeholder="number">
@@ -397,9 +397,9 @@
 
         <button onclick="kilo()">Chilogrammi (Kg)</button>
 
-
+ -->
     <script>
-
+/* 
         var result = (value/1000);
         
         function converter(value) {
@@ -408,11 +408,6 @@
             return result;
             
         }
-       
-
-        
-        
-        
     //    function toKilograms(Kg) {
     //        return (1/1000);
     //    }
@@ -423,7 +418,30 @@
         function kilo() {
             document.getElementById("convert").innerHTML = (document.getElementById("grams").value/1000 + " kg ");
         }
- 
+  */
+    </script>
+
+    <script>
+        var assert = require("assert");  // import di un modulo in JS (con require)
+
+        function converter(value, unit, targetUnit) {
+            
+        }
+
+        
+
+        describe("converterTests", function () {
+            it("convert 1000g in 1Kg", function (){
+                const result = converter(1000, "g", "Kg");
+
+                assert.equal(result, 1);
+            });
+        });
+
+
+
+
+
     </script>
 
         
