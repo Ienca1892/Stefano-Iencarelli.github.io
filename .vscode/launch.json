@@ -1,21 +1,23 @@
 {
     "configurations": [
         {
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/app.js",
+            "name": "Launch Chrome",
             "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
         },
     {
-        "name": "Launch Chrome",
+        "args": [
+            "--extensionDevelopmentPath=${workspaceFolder}"
+        ],
+        "name": "Avvia estensione",
+        "outFiles": [
+            "${workspaceFolder}/out/**/*.js"
+        ],
+        "preLaunchTask": "npm",
         "request": "launch",
-        "type": "chrome",
-        
-        "webRoot": "${workspaceFolder}"
-    },
-        
+        "type": "extensionHost"
+    }
     ]
 }
